@@ -17,3 +17,5 @@ pdf('filename.pdf')
 plot(x,y,col='green')
 dev.off()
 ```
+* seq(a,b length=n) --> create an vector from a to b, length is n
+* 
