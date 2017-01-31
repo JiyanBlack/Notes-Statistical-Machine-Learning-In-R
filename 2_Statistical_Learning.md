@@ -67,6 +67,7 @@ dev.off()
 Parametric: need less data, can be intepreted. Non-parametric: can produce more accurate fit if data are enough.
 
 7. Q7: 
+
   a. 3,2,sqrt(10),sqrt(5),sqrt(2),sqrt(3)
   b. Green, sqrt(2) is smallest
   c. 2,sqrt(2),sqrt(3) are the three nearest neighbours, is red,green,red, so the result is red.
