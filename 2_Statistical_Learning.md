@@ -56,7 +56,6 @@ dev.off()
   training error: decrease, as more flexibility always fits better
   test error: u-shape, sum of bias, variance and Bayes.
 4. Q4:
-  a. 
     * for each commercial item, predict whether its going to be sold out or not.
     * predict whether a human has some disease.
     * predict that whether a stock is worth buying or not.
@@ -66,11 +65,10 @@ dev.off()
 6. Q6: parametric: before learning, the form of f needs to be specified by human. Non-parametric: generate paras by machine.  
 Parametric: need less data, can be intepreted. Non-parametric: can produce more accurate fit if data are enough.
 
-7. Q7: 
-
-  a. 3,2,sqrt(10),sqrt(5),sqrt(2),sqrt(3)
-  b. Green, sqrt(2) is smallest
-  c. 2,sqrt(2),sqrt(3) are the three nearest neighbours, is red,green,red, so the result is red.
-  d. small, because small k value will produce more complex boundaries.
+7. Q7:   
+  a. 3,2,sqrt(10),sqrt(5),sqrt(2),sqrt(3)  
+  b. Green, sqrt(2) is smallest  
+  c. 2,sqrt(2),sqrt(3) are the three nearest neighbours, is red,green,red, so the result is red.  
+  d. small, because small k value will produce more complex boundaries.  
   
   
