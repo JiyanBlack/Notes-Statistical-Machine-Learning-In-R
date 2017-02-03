@@ -98,3 +98,47 @@ hist(Enroll, breaks = 100)
 hist(Accept/Apps, breaks = 100)
 
 ```
+
+9. Q9
+  1. quantitative: mpg,displacement,horsepower,weight,acceleration; qualitative: cylinders, year, origin, name
+  2.
+  ```
+  mpg          cylinders      displacement  
+ Min.   : 9.00   Min.   :3.000   Min.   : 68.0  
+ 1st Qu.:17.50   1st Qu.:4.000   1st Qu.:104.0  
+ Median :23.00   Median :4.000   Median :146.0  
+ Mean   :23.52   Mean   :5.458   Mean   :193.5  
+ 3rd Qu.:29.00   3rd Qu.:8.000   3rd Qu.:262.0  
+ Max.   :46.60   Max.   :8.000   Max.   :455.0  
+                                                
+   horsepower        weight      acceleration  
+ Min.   : 46.0   Min.   :1613   Min.   : 8.00  
+ 1st Qu.: 75.0   1st Qu.:2223   1st Qu.:13.80  
+ Median : 93.5   Median :2800   Median :15.50  
+ Mean   :104.5   Mean   :2970   Mean   :15.56  
+ 3rd Qu.:126.0   3rd Qu.:3609   3rd Qu.:17.10  
+ Max.   :230.0   Max.   :5140   Max.   :24.80  
+ NA's   :5
+ ```
+  4.
+  ```
+  mpg          cylinders      displacement
+ Min.   :11.00   Min.   :3.000   Min.   : 68  
+ 1st Qu.:18.00   1st Qu.:4.000   1st Qu.:100  
+ Median :23.90   Median :4.000   Median :145  
+ Mean   :24.44   Mean   :5.371   Mean   :187  
+ 3rd Qu.:30.70   3rd Qu.:6.000   3rd Qu.:250  
+ Max.   :46.60   Max.   :8.000   Max.   :455  
+                                              
+   horsepower      weight      acceleration  
+ Min.   : 46   Min.   :1649   Min.   : 8.50  
+ 1st Qu.: 75   1st Qu.:2215   1st Qu.:14.00  
+ Median : 90   Median :2795   Median :15.50  
+ Mean   :101   Mean   :2934   Mean   :15.72  
+ 3rd Qu.:115   3rd Qu.:3504   3rd Qu.:17.30  
+ Max.   :230   Max.   :4997   Max.   :24.80  
+ ```
+ 6. To predict mpg, the weight, acceleration, horsepower,cylinders are very important. Because through the
+ plot, we can see that mpg has negative correlations with horsepower, weight, has positive relationship with
+ acceleration.
+ 
