@@ -38,6 +38,8 @@ dev.off()
 * attach(Auto) --> attach auto's columns to the name space
 * cylinders = as.factor(cylinders) --> convert quantitative values to the qualitative values
 * summary(Auto), summary(mpg) --> produce a summary of the data.
+* rownames(dt_variable) = dt_variable[,1] --> set the row name as the first column, do not take part in the data processing.
+
 
 # Exercises
 1. Q1:
