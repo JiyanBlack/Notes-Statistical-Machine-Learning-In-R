@@ -74,3 +74,27 @@ Parametric: need less data, can be intepreted. Non-parametric: can produce more 
   c. 2,sqrt(2),sqrt(3) are the three nearest neighbours, is red,green,red, so the result is red.  
   d. small, because small k value will produce more complex boundaries.  
 
+8. Q8:
+```r
+#8
+summary(college)
+
+pairs(college[,1:10])
+
+attach(college)
+Private = as.factor(Private)
+plot(Private,Outstate)
+
+Elite = rep('No',nrow(college))
+Elite[Top10perc > 50] = 'Yes'
+Elite = as.factor(Elite)
+college = data.frame(college,Elite)
+summary(Elite)
+plot(Elite,Outstate)
+
+hist(Apps, breaks = 100)
+hist(Accept, breaks = 100)
+hist(Enroll, breaks = 100)
+hist(Accept/Apps, breaks = 100)
+
+```
