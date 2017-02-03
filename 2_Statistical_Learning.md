@@ -16,6 +16,7 @@
 * outer(x,y,function) --> perform the function to generate a outer join matrix
 * A = matrix(1:16,4,4), A[2,3], A[1:3,2:4], A[1:2,], A[,1:4]
 * A[-1:2,] --> negative value means detele the cooresponding row
+* rep(value,rownumber) --> produce repreat value vector.
 
 ## Ploting data
 * plot(x,y, xlab="x label",ylab="y label", main="sample graph")
@@ -72,5 +73,4 @@ Parametric: need less data, can be intepreted. Non-parametric: can produce more 
   b. Green, sqrt(2) is smallest  
   c. 2,sqrt(2),sqrt(3) are the three nearest neighbours, is red,green,red, so the result is red.  
   d. small, because small k value will produce more complex boundaries.  
-  
-  
+
