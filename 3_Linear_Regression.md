@@ -29,3 +29,8 @@
 * RSE is a measure of the lack of fit of the model to the data, it is an absolute measurement, hava not uniform standard on different datasets.
 
 #### R<sup>2</sup>
+* R squared is a relative measurement -- the proportion of variance in Y explained by predictors,it is in [0,1] and independent of X's scale.
+* R<sup>2</sup> = (TSS-RSS) / TSS = 1- RSS/TSS, TSS = sum((y_predict - y_mean)^2)
+* R squared statistic has an interpretational advantage over RSE.
+* R<sup>2</sup> and the correlation are both the measure of linear relationship between X and Y. In simple linear regression fitting, R<sup>2</sup> = r<sup>2</sup>(correlation squared)
+* correlation does not extend to multiple variable regression, instead we use R<sup>2</sup>.
