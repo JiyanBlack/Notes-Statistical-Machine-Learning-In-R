@@ -38,3 +38,4 @@
 # Multiple Linear Regression
 ## Estimating the Regression Coefficients
 #### F statistic
+* F = ((TSS - RSS)/p) / (RSS/(n - p -1)) , p is the number of predictors
