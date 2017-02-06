@@ -34,3 +34,7 @@
 * R squared statistic has an interpretational advantage over RSE.
 * R<sup>2</sup> and the correlation are both the measure of linear relationship between X and Y. In simple linear regression fitting, R<sup>2</sup> = r<sup>2</sup>(correlation squared)
 * correlation does not extend to multiple variable regression, instead we use R<sup>2</sup>.
+
+# Multiple Linear Regression
+## Estimating the Regression Coefficients
+#### F statistic
