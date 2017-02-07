@@ -85,3 +85,10 @@
 * Is there synergy among predictors? Small p-value for the interaction terms indicates the presence of such relationship.
 
 # Compare with K-nearest Neighbours
+* Non-parametric method -- KNN has advantages:
+ 1. Do not assume the form of the function.
+ 2. More flexible, work for any case.
+* The parametric approach will outperform the non-parametric approach if the parametric form that has been selected is close to the truth form.
+* The selection of K is a bias-variance tradeoff.
+* The increase in dimension has only caused a small deterioration in the regression method, but affect the KNN a lot.
+* Parametric will outperform a non-parametric method when there is a small number of observations per predictor.
