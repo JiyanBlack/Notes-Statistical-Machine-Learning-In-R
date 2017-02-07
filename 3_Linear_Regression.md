@@ -132,4 +132,26 @@ Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
 Residual standard error: 4.906 on 390 degrees of freedom
 Multiple R-squared:  0.6059,	Adjusted R-squared:  0.6049 
 F-statistic: 599.7 on 1 and 390 DF,  p-value: < 2.2e-16
+
+> predict(my_fit, data.frame(horsepower=98))
+       1 
+24.46708 
 ```
+1. 
+  a. there is a relationship betweem X and Y, F-statistic: 599.7, p-value ~= 0
+  b. The relationship is very strong, p-value is very small.
+  c. is negative, the estimated value is -0.158
+  d. The predicted value is: 24.47
+2. 
+```r
+plot(Auto$horsepower, Auto$mpg)
+abline(my_fit)
+```
+3.
+```r
+par(mfrow=c(2,2))
+plot(my_fit)
+```
+Problems:
+* residual plot is not random normal distribution
+* many high leverage points
