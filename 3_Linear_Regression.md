@@ -202,3 +202,14 @@ F-statistic: 252.4 on 7 and 384 DF,  p-value: < 2.2e-16
 2. weight,year and origin all have significant relationship to the response.
 3. it suggest that with the increasing of year, the car costs more gas.
 4. residual plot display high residual points, and it has non-random pattern. Also point 14 has high leverage.
+5. the interaction term weight:year has significant impact. 
+```
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -1.120e+02  2.077e+01  -5.394 1.20e-07 ***
+weight       2.674e-02  5.228e-03   5.116 4.93e-07 ***
+year         2.021e+00  2.731e-01   7.399 8.67e-13 ***
+origin       2.354e+00  5.115e+00   0.460    0.646    
+weight:year -4.401e-04  6.968e-05  -6.316 7.38e-10 ***
+year:origin -1.863e-02  6.624e-02  -0.281    0.779    
+```
