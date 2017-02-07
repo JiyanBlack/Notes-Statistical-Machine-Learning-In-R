@@ -92,3 +92,44 @@
 * The selection of K is a bias-variance tradeoff.
 * The increase in dimension has only caused a small deterioration in the regression method, but affect the KNN a lot.
 * Parametric will outperform a non-parametric method when there is a small number of observations per predictor.
+
+# Exercises
+## Q3
+Y = 50 + 20* GPA + 0.07 * IQ + 35 * Gender + 0.01 * GPA:IQ - 10 * GPA:Gender
+1. iii is correct, because (35 - 10GPA) is the term before Gender, so if GPA is high, males earn more than females.
+2. 137.1
+3. False. The value of coefficient has nothing to do with the importance of that variable. Should check the p-value.
+
+## Q4
+1. Although the true relationship is linear, the cubic regression has smaller RSS. Because there will be irreducible errors in data, and cubic regression will try to reduce the error caused by them. The linear regression will not instead.
+2. For test RSS, linear regression will have smaller RSS. Because the true relationship is linear, the cubic regression will perform badly on non-training data since it's form is not linear.
+3. Polynomial regression will always have lower training RSS than linear model.
+4. There is not enough information. When the true form is far from linear, cubic model wins, vice versa.
+
+## Q6
+True, having x=x_ba, y = y_ba, and do some calculas.
+
+## Q7
+```
+> my_fit = lm(mpg~ horsepower, data = Auto)
+
+> summary(my_fit)
+
+Call:
+lm(formula = mpg ~ horsepower, data = Auto)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-13.5710  -3.2592  -0.3435   2.7630  16.9240 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 39.935861   0.717499   55.66   <2e-16 ***
+horsepower  -0.157845   0.006446  -24.49   <2e-16 ***
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 4.906 on 390 degrees of freedom
+Multiple R-squared:  0.6059,	Adjusted R-squared:  0.6049 
+F-statistic: 599.7 on 1 and 390 DF,  p-value: < 2.2e-16
+```
