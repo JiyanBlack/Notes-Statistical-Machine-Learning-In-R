@@ -39,7 +39,8 @@
 ## Estimating the Regression Coefficients
 #### F statistic
 * F-statistic is used to test whether at least one variable contribute to the variance in Y.
-* F = ((TSS - RSS)/p) / (RSS/(n - p -1)) , p is the number of predictors
+* F = ((TSS - RSS)/p) / (RSS/(n - p -1)) , p is the number of predictors.
+* Given the value of p and n, we can compute the p-value associated with F statistic.
 * If F is close to 1, H0 is true. F >> 1, then Ha is true.
 
 ## Variable Selection
@@ -71,4 +72,16 @@
 * Non-linearity of the response-predictor relationships: residual plot -- plot the residuals versus the predicted values Y. Should display normal random distribution. Use non-linear transformations on the predictors.
 * Correlation of Error Terms: produce unwarranted sense of confidence in our model.
 * Non-constant Variance of Error Terms: the Y - residual plot may display a funnel shape. Transform Y such as logY. 
-* Outliers: yi is far from the predicted value y(i): usually have no huge impact on the regression result, but have impact on the RSE and R<sup>2</sup>.
+* Outliers: yi is far from the predicted value y(i): usually have no huge impact on the regression result, but have impact on the RSE and R<sup>2</sup>. Residual Plots can identify outliers. But Studentized Residuals is more convenient, Studentized Residuals are relative values, >3 means possible outliers.
+* High leverage Points: unusual value for x, the predicted y seems normal. These points have high impact on the final regression due to the extreme x value. Leverage Statistic displays the high leveral points.
+* Collinearity: means two or more predictors are strongly dependent. Collinearity reduces the accuracy of the estimates of the coefficients and confuse which predictor is useful(change p-value), the power of the hypothesis test is reduced. Compute the Variance Inflation Factor(VIF) to detect the collinearity. When VIF is close to 1, it means that it has no collinearity. If the collinearity is detected, we can drop all but one predictor or combine them together.
+
+# Summary
+* Is there a relationship between predictors and results? Using F-statistic to decide whether or not reject null hypothesis.
+* How strong is the relationship? RSE and R<sup>2</sup>
+* which predictors matter? calculate the p-value for each variable's F-statistic. Variable selection problem.
+* How accuarately can we predict? Y = f(X) + residual, if evaluate f(X), we use confidence interval, if Y we use prediction interval.
+* Is the relationship linear? Variable Transformation.
+* Is there synergy among predictors? Small p-value for the interaction terms indicates the presence of such relationship.
+
+# Compare with K-nearest Neighbours
