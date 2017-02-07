@@ -25,7 +25,7 @@
 ## Assessing the accuracy of the model
 * After rejecting the null hypothesis, we want to know how well our data is fitting. Two main terms: Residual Standard Error(RSE) and R^2 statistic.
 #### RSE
-* RSE = sqrt(RSS / n-2), RSS = sum((y_predict - y)^2)
+* RSE = sqrt(RSS / n-1-p), RSS = sum((y_predict - y)^2)
 * RSE is a measure of the lack of fit of the model to the data, it is an absolute measurement, hava not uniform standard on different datasets.
 
 #### R<sup>2</sup>
@@ -38,4 +38,37 @@
 # Multiple Linear Regression
 ## Estimating the Regression Coefficients
 #### F statistic
+* F-statistic is used to test whether at least one variable contribute to the variance in Y.
 * F = ((TSS - RSS)/p) / (RSS/(n - p -1)) , p is the number of predictors
+* If F is close to 1, H0 is true. F >> 1, then Ha is true.
+
+## Variable Selection
+* Forward selection: begin with null model(0 variables), try out the p selection and add the variable that results the lowest RSS.
+* Backward selection: Start with all variables fitted in the model, and remove the variable with the lagest p-value.
+* Mixed selection: Start with no variables, add the variable that result in the smallest RSS, and then test if any p-value changing, remove variables with large p-value.
+
+## Evaluate Model
+* R<sup>2</sup> and RSE
+* Confidence Interval: the Y_predict is different from the true population regression plane. This is due called reducible error. Confidence Interval is used to compute how close Y_predict is close to population regression.
+* Prediction Intervals: even if we have the true population regression, there is still difference between the observations and the regression due to irreducible error. Prediction intervals are used to answer how much Y_true vary from Y.
+* Given the x1 and x2, we predict 95% confidence interval of y is [98,102], means that 95% this range will contain true population regression result. The prediction interval is [90,110], means that 95% this range will contain the true Y value in real observation.
+
+# Other Considerations
+
+## Qualitative Predictors
+* Vectorize the predictors
+  * Predictors with two levels: 0 - male, 1 - female
+  * Predictors with more levels: create more dummy variables, x1 -- asian or not, x2 -- white or not.
+
+## Extensions of the Linear Model
+#### Additive Assumption
+* Additive: the changing in a predictor Xi on Y is independent of other predictors.
+* Add interaction terms: X1, X2, X1*X2
+#### Linear Assumption
+* Add polynomial terms
+
+## Potential Problems
+* Non-linearity of the response-predictor relationships: residual plot -- plot the residuals versus the predicted values Y. Should display normal random distribution. Use non-linear transformations on the predictors.
+* Correlation of Error Terms: produce unwarranted sense of confidence in our model.
+* Non-constant Variance of Error Terms: the Y - residual plot may display a funnel shape. Transform Y such as logY. 
+* Outliers: yi is far from the predicted value y(i): usually have no huge impact on the regression result, but have impact on the RSE and R<sup>2</sup>.
