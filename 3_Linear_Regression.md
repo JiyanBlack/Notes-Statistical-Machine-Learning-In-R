@@ -260,3 +260,4 @@ F-statistic: 62.43 on 2 and 397 DF,  p-value: < 2.2e-16
 Price       -0.06475984 -0.04419543
 USYes        0.69151957  1.70776632
 ```
+* According to the studentized residual plot, no points exceed 3. But there are several high leverage points in the summary graph.
