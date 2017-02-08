@@ -234,3 +234,29 @@ F-statistic: 41.52 on 3 and 396 DF,  p-value: < 2.2e-16
 ```
 * Price has negative effect on sales as well as Urban. US produced cars are more welcome.
 * y = 13.043 - 0.054 * price - 0.022 * UrbanYes + 1.201 * USYes
+* We can only reject H0 for Price and US.
+```
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.9269 -1.6286 -0.0574  1.5766  7.0515 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 13.03079    0.63098  20.652  < 2e-16 ***
+Price       -0.05448    0.00523 -10.416  < 2e-16 ***
+USYes        1.19964    0.25846   4.641 4.71e-06 ***
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 2.469 on 397 degrees of freedom
+Multiple R-squared:  0.2393,	Adjusted R-squared:  0.2354 
+F-statistic: 62.43 on 2 and 397 DF,  p-value: < 2.2e-16
+```
+* The latter model that eliminates Urban predictor is better because it has larger F-statistic without compromise R2.
+* Confidence Interval:
+```
+                  2.5 %      97.5 %
+(Intercept) 11.79032020 14.27126531
+Price       -0.06475984 -0.04419543
+USYes        0.69151957  1.70776632
+```
