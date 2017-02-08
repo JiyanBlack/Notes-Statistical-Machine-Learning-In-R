@@ -213,3 +213,24 @@ origin       2.354e+00  5.115e+00   0.460    0.646
 weight:year -4.401e-04  6.968e-05  -6.316 7.38e-10 ***
 year:origin -1.863e-02  6.624e-02  -0.281    0.779    
 ```
+## Q10
+```
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.9206 -1.6220 -0.0564  1.5786  7.0581 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 13.043469   0.651012  20.036  < 2e-16 ***
+Price       -0.054459   0.005242 -10.389  < 2e-16 ***
+UrbanYes    -0.021916   0.271650  -0.081    0.936    
+USYes        1.200573   0.259042   4.635 4.86e-06 ***
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 2.472 on 396 degrees of freedom
+Multiple R-squared:  0.2393,	Adjusted R-squared:  0.2335 
+F-statistic: 41.52 on 3 and 396 DF,  p-value: < 2.2e-16
+```
+* Price has negative effect on sales as well as Urban. US produced cars are more welcome.
+* y = 13.043 - 0.054 * price - 0.022 * UrbanYes + 1.201 * USYes
