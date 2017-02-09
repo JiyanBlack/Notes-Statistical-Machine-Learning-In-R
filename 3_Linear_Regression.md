@@ -315,4 +315,51 @@ Same as the t-value in regression.
 5. The x and y's role does not matter because the equation of T-statistic is the same for x~y and y~x.
 
 ## Q12
-1. When sum(x^2) == sum(y^2), the t-statistic shares the same value for x~y and y~x.
+1. When the true relationship between x and y are 1.
+2. 
+```
+> x = rnorm(1000)
+> y = 2*x + rnorm(1000)
+> fit = lm(y~x+0)
+> summary(fit)
+
+Call:
+lm(formula = y ~ x + 0)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.3010 -0.6850 -0.0518  0.7375  3.5917 
+
+Coefficients:
+  Estimate Std. Error t value Pr(>|t|)    
+x  2.02695    0.03172   63.91   <2e-16 ***
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 1.053 on 999 degrees of freedom
+Multiple R-squared:  0.8035,	Adjusted R-squared:  0.8033 
+F-statistic:  4085 on 1 and 999 DF,  p-value: < 2.2e-16
+
+> fit_reverse = lm(x~y+0)
+> summary(fit_reverse)
+
+Call:
+lm(formula = x ~ y + 0)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.33439 -0.30657 -0.00058  0.31087  1.65686 
+
+Coefficients:
+  Estimate Std. Error t value Pr(>|t|)    
+y 0.396403   0.006202   63.91   <2e-16 ***
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 0.4655 on 999 degrees of freedom
+Multiple R-squared:  0.8035,	Adjusted R-squared:  0.8033 
+F-statistic:  4085 on 1 and 999 DF,  p-value: < 2.2e-16
+```
+## Q13
+3. The length of y is 100. B0 = -1, B1 = 0.5.
+
