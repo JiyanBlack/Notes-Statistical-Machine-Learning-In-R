@@ -479,3 +479,4 @@ F-statistic: 18.26 on 1 and 98 DF,  p-value: 4.468e-05
 ```
 Reject H0 for x2, x2 is statistically significant.
 6. No. Because x1 and x2 are strongly correlated, so if x1 and x2 all participate in the regression, it is possible that one of its significant will be mitigated.
+
