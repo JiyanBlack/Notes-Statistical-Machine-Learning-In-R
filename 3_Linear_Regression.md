@@ -362,4 +362,80 @@ F-statistic:  4085 on 1 and 999 DF,  p-value: < 2.2e-16
 ```
 ## Q13
 3. The length of y is 100. B0 = -1, B1 = 0.5.
+4. 
+```
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.60032 -0.15270 -0.00523  0.16077  0.48807 
 
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.98497    0.02303  -42.77   <2e-16 ***
+x            0.48626    0.02395   20.31   <2e-16 ***
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 0.2291 on 98 degrees of freedom
+Multiple R-squared:  0.808,	Adjusted R-squared:  0.806 
+F-statistic: 412.4 on 1 and 98 DF,  p-value: < 2.2e-16
+```
+The estimated value of intercept and B1 is -0.98 and 0.486, close to true value but still different.
+5.
+```
+> fit_sqr = lm(y~x+I(x^2))
+> summary(fit_sqr)
+
+Call:
+lm(formula = y ~ x + I(x^2))
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.58409 -0.15274 -0.01265  0.16004  0.48103 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.96466    0.02992 -32.245   <2e-16 ***
+x            0.48089    0.02446  19.660   <2e-16 ***
+I(x^2)      -0.02252    0.02120  -1.062    0.291    
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 0.229 on 97 degrees of freedom
+Multiple R-squared:  0.8102,	Adjusted R-squared:  0.8063 
+F-statistic:   207 on 2 and 97 DF,  p-value: < 2.2e-16
+```
+Accept null hypothesis for x^2 term, p-value too small. R-squared value is not improved.
+
+## Q14
+1. coefficients: 2,2,0.3
+2. 
+```
+> cor(x1,x2)
+[1] 0.8181009
+```
+The correlation between x1 and x2 is 0.8181009
+3. 
+```
+> fit = lm(y~x1+x2)
+> summary(fit)
+
+Call:
+lm(formula = y ~ x1 + x2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.93415 -0.44932  0.00685  0.65498  2.62138 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   2.0113     0.2253   8.925  2.8e-14 ***
+x1            2.2993     0.6710   3.427 0.000897 ***
+x2           -0.2352     1.0949  -0.215 0.830368    
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 1.044 on 97 degrees of freedom
+Multiple R-squared:  0.2481,	Adjusted R-squared:  0.2326 
+F-statistic:    16 on 2 and 97 DF,  p-value: 9.86e-07
+```
+Reject the null hypothesis for x1, p-value small. But cannot reject for x2. x2 is insignificant.
