@@ -313,3 +313,6 @@ get:
 ```
 Same as the t-value in regression.
 5. The x and y's role does not matter because the equation of T-statistic is the same for x~y and y~x.
+
+## Q12
+1. When sum(x^2) == sum(y^2), the t-statistic shares the same value for x~y and y~x.
