@@ -261,3 +261,55 @@ Price       -0.06475984 -0.04419543
 USYes        0.69151957  1.70776632
 ```
 * According to the studentized residual plot, no points exceed 3. But there are several high leverage points in the summary graph.
+
+## Q11
+1. linear regression result:
+```
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.9154 -0.6472 -0.1771  0.5056  2.3109 
+
+Coefficients:
+  Estimate Std. Error t value Pr(>|t|)    
+x   1.9939     0.1065   18.73   <2e-16 ***
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 0.9586 on 99 degrees of freedom
+Multiple R-squared:  0.7798,	Adjusted R-squared:  0.7776 
+F-statistic: 350.7 on 1 and 99 DF,  p-value: < 2.2e-16
+```
+The x is significant and the R-squared value is 0.77 means that 77% of variance in Y can be explained by X.
+
+2. 
+```
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.8699 -0.2368  0.1030  0.2858  0.8938 
+
+Coefficients:
+  Estimate Std. Error t value Pr(>|t|)    
+y  0.39111    0.02089   18.73   <2e-16 ***
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 0.4246 on 99 degrees of freedom
+Multiple R-squared:  0.7798,	Adjusted R-squared:  0.7776 
+F-statistic: 350.7 on 1 and 99 DF,  p-value: < 2.2e-16
+```
+The y is statistically significant. Reject null hypothesis.
+
+3. The x~y and y~x in 1 and 2 share common R-value, but the estimated intercept is different.
+4. Test:
+```r
+top <- sqrt(100-1) * sum(x*y)
+down <- sqrt(sum(x*x)*sum(y*y) - sum(x*y)^2)
+print(top/down)
+```
+get:
+```
+> print(top/down)
+[1] 18.72593
+```
+Same as the t-value in regression.
+5. The x and y's role does not matter because the equation of T-statistic is the same for x~y and y~x.
