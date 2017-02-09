@@ -439,3 +439,43 @@ Multiple R-squared:  0.2481,	Adjusted R-squared:  0.2326
 F-statistic:    16 on 2 and 97 DF,  p-value: 9.86e-07
 ```
 Reject the null hypothesis for x1, p-value small. But cannot reject for x2. x2 is insignificant.
+4. 
+```
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.92132 -0.45811 -0.01036  0.64112  2.62227 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   2.0123     0.2242   8.976 2.02e-14 ***
+x1            2.1813     0.3840   5.681 1.37e-07 ***
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 1.038 on 98 degrees of freedom
+Multiple R-squared:  0.2477,	Adjusted R-squared:  0.2401 
+F-statistic: 32.27 on 1 and 98 DF,  p-value: 1.374e-07
+```
+Reject H0 of x1, x1 becomes statistically significant.
+5.
+```
+Call:
+lm(formula = y ~ x2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-3.10165 -0.76917  0.07393  0.67426  2.53705 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   2.4185     0.2017  11.991  < 2e-16 ***
+x2            2.8344     0.6633   4.273 4.47e-05 ***
+---
+Signif. codes:  0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+Residual standard error: 1.099 on 98 degrees of freedom
+Multiple R-squared:  0.1571,	Adjusted R-squared:  0.1485 
+F-statistic: 18.26 on 1 and 98 DF,  p-value: 4.468e-05
+```
+Reject H0 for x2, x2 is statistically significant.
+6. No. Because x1 and x2 are strongly correlated, so if x1 and x2 all participate in the regression, it is possible that one of its significant will be mitigated.
