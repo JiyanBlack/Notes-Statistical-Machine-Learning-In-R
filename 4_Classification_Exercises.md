@@ -19,3 +19,12 @@ If it is non-linear, QDA is better on both testing and training dataset.
 As n increases, the QDA will become more accuracy than LDA. Because QDA has high variance, so is better for large dataset.
 #### d
 False. Because the assumed model for QDA is wrong, there is no way it could perform better than LDA.
+
+## Q6
+#### a
+log(p/(1-p)) = -6 + 0.05 * X1 + 1 * X2,  p = 0.3773.
+#### b
+log(1) = 0 = -6 + 0.05 * X1 + 3.5, X1 = 50.
+
+## Q7
+#### a
