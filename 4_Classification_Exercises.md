@@ -9,3 +9,13 @@ With 100 preditors, 0.1^98 % is used to make the prediction.
 The drawback of KNN is when p is large, the prediction is less reliable.
 #### e
 x ^ p = 0.1, x = 0.1^(1/p)
+
+## Q5
+#### a
+If the Bayes decision boundary is linear, QDA performs better on the training set. LDA is better on the test set.
+#### b
+If it is non-linear, QDA is better on both testing and training dataset.
+#### c
+As n increases, the QDA will become more accuracy than LDA. Because QDA has high variance, so is better for large dataset.
+#### d
+False. Because the assumed model for QDA is wrong, there is no way it could perform better than LDA.
