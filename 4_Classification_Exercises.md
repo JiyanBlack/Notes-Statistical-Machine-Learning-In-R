@@ -30,4 +30,50 @@ log(1) = 0 = -6 + 0.05 * X1 + 3.5, X1 = 50.
 p = 0.75186
 
 ## Q8
-We should use KNN. Because KNN can gain much better performance with the increasing number of samples.
+Logistic Regression. Because the KNN will achieve 0% error rate for training data, so the acctual error rate of KNN is 36%.
+
+## Q9
+#### a
+p = 0.27
+#### b
+p = 0.19
+
+## Q10
+#### a
+There are hardly any pattern in the data.
+#### b
+```
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.6949  -1.2565   0.9913   1.0849   1.4579  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)   
+(Intercept)  0.26686    0.08593   3.106   0.0019 **
+Lag1        -0.04127    0.02641  -1.563   0.1181   
+Lag2         0.05844    0.02686   2.175   0.0296 * 
+Lag3        -0.01606    0.02666  -0.602   0.5469   
+Lag4        -0.02779    0.02646  -1.050   0.2937   
+Lag5        -0.01447    0.02638  -0.549   0.5833   
+Volume      -0.02274    0.03690  -0.616   0.5377   
+---
+Signif. codes:  
+0 ?**?0.001 ?*?0.01 ??0.05 ??0.1 ??1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1496.2  on 1088  degrees of freedom
+Residual deviance: 1486.4  on 1082  degrees of freedom
+AIC: 1500.4
+
+Number of Fisher Scoring iterations: 4
+```
+No predictors seems so important. Only Lag2 seems hold a little impact on the response.
+
+#### c
+```
+> glm.pred = rep('Down',1089)
+> glm.pred[glm.probs>0.5] = 'Up'
+> mean(glm.pred == Weekly$Direction)
+[1] 0.5610652
+```
