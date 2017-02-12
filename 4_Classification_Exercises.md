@@ -27,4 +27,7 @@ log(p/(1-p)) = -6 + 0.05 * X1 + 1 * X2,  p = 0.3773.
 log(1) = 0 = -6 + 0.05 * X1 + 3.5, X1 = 50.
 
 ## Q7
-####
+p = 0.75186
+
+## Q8
+We should use KNN. Because KNN can gain much better performance with the increasing number of samples.
