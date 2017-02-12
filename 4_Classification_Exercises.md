@@ -76,4 +76,53 @@ No predictors seems so important. Only Lag2 seems hold a little impact on the re
 > glm.pred[glm.probs>0.5] = 'Up'
 > mean(glm.pred == Weekly$Direction)
 [1] 0.5610652
+> table(glm.pred, Direction)
+        Direction
+glm.pred Down  Up
+    Down   54  48
+    Up    430 557
 ```
+The confusion matrix is telling us: Of all true postives, our model can predict most of them, but will also include many false positive.
+
+#### d
+```
+> glm.pred2 = rep('Down',1089)
+> glm.pred2[glm.probs2 > 0.5] = 'Up'
+> table(glm.pred2, Direction)
+         Direction
+glm.pred2 Down  Up
+     Down   33  26
+     Up    451 579
+```
+Use only Lag2, we will get a model that tends to predict more postive examples. The True positive and false positive all rises.
+
+#### e
+```
+> table(lda.class, Direction)
+         Direction
+lda.class Down  Up
+     Down   33  25
+     Up    451 580
+```
+The result of LDA is very close to logistic regression.
+
+#### f
+```
+> table(qda.pred,Direction)
+        Direction
+qda.pred Down  Up
+    Down    0   0
+    Up    484 605
+```
+QDA achieves better accuray by simple predicting all test data will produce positive result.
+
+#### g
+```
+knn.fit Down Up
+   Down   21 30
+   Up     22 31
+```
+
+#### h
+
+#### i
