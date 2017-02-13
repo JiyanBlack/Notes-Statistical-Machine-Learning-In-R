@@ -100,3 +100,34 @@ logistic regression: 62.5%, lda: 62.5%, qda:58.7%, knn: 49.0%
 
 #### h
 The logistic regression and lda produce the best accuracy as 62.5%.
+
+## Q11
+#### b
+According to the plots, horsepower/weight have negative correlations with mpg01. Acceleration has postive correlation.
+#### d
+```
+> mean(lda.class == Auto01.test$mpg01)
+[1] 0.8421053
+```
+LDA achieves error rate: 15.8%.
+#### e
+```
+> qda.fit = qda(mpg01~horsepower+weight+acceleration,data=Auto01,subset=train)
+> qda.pred = predict(qda.fit,Auto01.test)
+> qda.class = qda.pred$class
+> mean(qda.class == Auto01.test$mpg01)
+[1] 0.8421053
+```
+QDA get the same error rates as LDA.
+#### f
+```
+> mean(glm.pred != Auto01.test$mpg01)
+[1] 0.1052632
+```
+Error rate is 0.105 for logistic regression.
+#### g
+```
+> mean(knn.fit != Auto01.test$mpg01)
+[1] 0.1315789
+```
+k=1: 13.16%, k=4:18.42%, k=2:15.79%.
