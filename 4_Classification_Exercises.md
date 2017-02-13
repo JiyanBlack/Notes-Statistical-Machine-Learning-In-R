@@ -131,3 +131,47 @@ Error rate is 0.105 for logistic regression.
 [1] 0.1315789
 ```
 k=1: 13.16%, k=4:18.42%, k=2:15.79%.
+
+## Q12
+#### a 
+```r
+Power = function(){
+  print(2^3)
+}
+```
+#### b
+```r
+Power2 = function(x,y){
+  print(x^y)
+}
+```
+#### c
+```r
+> Power2(10,3)
+[1] 1000
+> Power2(8,17)
+[1] 2.2518e+15
+> Power2(131,3)
+[1] 2248091
+```
+#### d
+```r
+Power3 = function(x,y){
+  return(x^y)
+}
+```
+#### e
+```
+> x = 1:10
+> y = Power3(x,2)
+> y
+ [1]   1   4   9  16  25  36  49  64  81 100
+> plot(x,y)
+> plot(x,y,log='x')
+> plot(x,y,log='x')
+> plot(x,y)
+> plot(x,y,log='x')
+> plot(x,y,log='y')
+> plot(x,y,log='xy')
+```
+log='xy' will display a linear line. Because log(y) = 2log(x).
