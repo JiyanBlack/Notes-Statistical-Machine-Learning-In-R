@@ -72,3 +72,23 @@ t2*  2.080898e-05  6.715005e-08 4.127740e-06
 t3*  5.647103e-03 -5.733883e-05 2.105660e-04
 ```
 get similar std.error value.
+
+## Q7
+#### a
+```
+> glm.prob =rep(0,1089)
+
+> for(i in 1:1089) {
++   curfit = glm(Direction~Lag1+Lag2, data=Weekly[-i,],family=binomial)
++   glm.prob[i] = predict(curfit, Weekly[i,],type='respon .... [TRUNCATED] 
+
+> glm.pred = rep('Down',1089)
+
+> glm.pred[glm.prob>0.5]='Up'
+
+> glm.err = (glm.pred != Weekly$Direction)
+> mean(glm.err)
+[1] 0.4499541
+
+```
+error rate is 44.995%
