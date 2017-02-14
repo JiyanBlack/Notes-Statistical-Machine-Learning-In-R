@@ -29,3 +29,27 @@ LOOCV has better performance, but k-fold cross validation requires less computat
 
 ## Q4
 Use bootstrap, estimate the result through 100 different resampled observations, calculate the std through the final result.
+
+## Q5
+#### b-c
+```
+> fiveB()
+[1] 2000
+[1] 0.0225
+
+> fiveB()
+[1] 4000
+[1] 0.02475
+
+> fiveB()
+[1] 6000
+[1] 0.02616667
+
+> fiveB()
+[1] 8000
+[1] 0.026
+```
+With the increase of test dataset, it seems that the error rate is around 2.6%.
+
+#### d
+Still around 0.026, no noticeable improvement.
