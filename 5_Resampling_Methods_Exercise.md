@@ -1,19 +1,19 @@
-# Q2
-## a
+## Q2
+#### a
 p = 1- 1/n
-## b
+#### b
 p = 1- 1/n
-## c
+#### c
 True. Because for every sample, the probability that it is not jth observation is 1-1/n, so the jth oberservation will not be in the sample is (1-1/n)^n.
-## d
+#### d
 1-(1-1/5)^5 = 0.67232
-## e
+#### e
 1-(1-1/100)^100 = 63.4%
-## f
+#### f
 1-(1-1/10000)^10000 = 63.21%
-## g
+#### g
 It dramatically decreases at the beginning, then stays the same level.
-## h
+#### h
 ```
 > mean(store)
 [1] 0.6418
@@ -28,3 +28,4 @@ b) k-fold crossvalidation is better than the validation set approach because it 
 LOOCV has better performance, but k-fold cross validation requires less computational resource.
 
 ## Q4
+Use bootstrap, estimate the result through 100 different resampled observations, calculate the std through the final result.
