@@ -53,3 +53,22 @@ With the increase of test dataset, it seems that the error rate is around 2.6%.
 
 #### d
 Still around 0.026, no noticeable improvement.
+
+## Q6
+#### a
+Use logistic regression:
+```
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -1.154e+01  4.348e-01 -26.545  < 2e-16 ***
+income       2.081e-05  4.985e-06   4.174 2.99e-05 ***
+balance      5.647e-03  2.274e-04  24.836  < 2e-16 ***
+```
+bootstrap:
+```
+         original        bias     std. error
+t1* -1.154047e+01  9.699111e-02 4.101121e-01
+t2*  2.080898e-05  6.715005e-08 4.127740e-06
+t3*  5.647103e-03 -5.733883e-05 2.105660e-04
+```
+get similar std.error value.
