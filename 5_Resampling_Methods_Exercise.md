@@ -223,3 +223,61 @@ Number of Fisher Scoring iterations: 2
     2                 B0,B1,B2  
     3                 B0,B1,B2  
     4                 B0,B1,B2  
+
+## Q9
+#### a
+```
+> mean(Boston$medv)
+[1] 22.53281
+```
+#### b
+```
+> sd(medv) / sqrt(dim(Boston)[1])
+[1] 0.4088611
+```
+The standard error of sample mean is 0.40886
+#### c
+```
+Bootstrap Statistics :
+    original       bias    std. error
+t1* 22.53281 -0.004750198   0.3920971
+```
+The bootstrap std error is 0.392, close to 0.40886
+#### d
+95% confidence interval:
+```
+> conf[1] = (medv.mean - 2*medv.std)
+
+> conf[2] = (medv.mean + 2*medv.std)
+> conf
+[1] 21.71508 23.35053
+```
+#### e
+```
+> median(medv)
+[1] 21.2
+```
+#### f
+```
+Call:
+boot(data = Boston, statistic = boot.median, R = 1000)
+
+
+Bootstrap Statistics :
+    original   bias    std. error
+t1*     21.2 -0.01565   0.3897428
+```
+std.error for median is 0.3897
+
+#### g
+quantile estimate is ```  10%   12.75 ```
+#### h
+```
+boot(data = Boston, statistic = boot.10, R = 1000)
+
+
+Bootstrap Statistics :
+    original  bias    std. error
+t1*    12.75  0.0152   0.5069082
+```
+std error for 10 percentile of medv is 0.5069
