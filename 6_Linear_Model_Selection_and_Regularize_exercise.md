@@ -17,9 +17,20 @@ The best subset selection method usually has the smallest test RSS, but other me
 3. ii
 
 ## Q3
-#### a
 1. iv
 2. ii
 3. iii
 4. iv
 5. v
+
+## Q4
+1. iii
+2. ii
+3. iv
+4. iii
+5. v
+
+## Q5
+#### a
+minimize RSS + sum(Bi^2)
+
